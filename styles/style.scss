@@ -1,0 +1,13 @@
+html {
+	overflow-x     : hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./components/navbar";
+@import "./components/home";

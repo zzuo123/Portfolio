@@ -1,0 +1,62 @@
+.center {
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	height          : 35em;
+	width           : 100vw;
+	background-color: #68B4A0;
+	color           : white;
+
+	@include lg {
+		height: 25em;
+	}
+
+	@include md {
+		height: 20em;
+	}
+}
+
+#header {
+	height   : fit-content;
+	width    : fit-content;
+	font-size: 5em;
+
+	@include lg {
+		font-size: 3em;
+	}
+
+	@include md {
+		font-size: 2em;
+	}
+
+	a {
+		text-decoration: none;
+		color          : white;
+		cursor         : default;
+	}
+}
+
+.svg-btn {
+	display        : flex;
+	width          : 100%;
+	justify-content: center;
+
+	img {
+		transform: translateY(-50%);
+		cursor   : pointer;
+		width    : 8%;
+		z-index  : 990;
+
+		@include lg {
+			width: 15%;
+		}
+	}
+}
+
+.anchor {
+	display       : block;
+	position      : relative;
+	top           : -15vh;
+	/* visibility : hidden; */
+	padding-top   : 12vh;
+}
