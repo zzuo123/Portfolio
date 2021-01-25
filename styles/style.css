@@ -48,18 +48,6 @@ body {
   height: 0;
 }
 
-.title {
-  font-size: 3em;
-  margin: 0 0 0.5em 0;
-  text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .title {
-    margin: 0;
-  }
-}
-
 nav {
   position: fixed;
   top: 0px;
@@ -74,14 +62,15 @@ nav {
           align-items: center;
   min-height: 8vh;
   width: 100%;
-  background-color: #06D6A0;
+  background-color: #197DB3;
 }
 
 .logo {
   color: #e2e2e2;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .nav-links {
@@ -105,8 +94,8 @@ nav {
     position: absolute;
     /* 100vh(display box height) - 8vh(nav height) */
     height: 92vh;
-    top: 8vh;
-    background-color: #06D6A0;
+    top: 6vh;
+    background-color: #197DB3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -118,6 +107,7 @@ nav {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    padding: 0px;
     /* Hide the navlinks to the right side and transition it back in when mouse click on burger */
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -143,7 +133,7 @@ nav {
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .burger {
@@ -228,8 +218,8 @@ nav {
           align-items: center;
   height: 90vh;
   width: 100vw;
-  background-color: #68B4A0;
-  color: #e2e2e2;
+  background-color: #57C4FF;
+  color: white;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
@@ -240,18 +230,19 @@ nav {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 5em;
+  font-size: 76.8px;
 }
 
 @media (max-width: 1024px) {
   #header {
-    font-size: 3em;
+    font-size: 64px;
   }
 }
 
 @media (max-width: 768px) {
   #header {
-    font-size: 2em;
+    text-align: center;
+    font-size: 40px;
   }
 }
 
@@ -274,8 +265,14 @@ nav {
 }
 
 #about {
-  margin: 0 18%;
+  margin: 0;
   padding-top: 5em;
+}
+
+@media (max-width: 1024px) {
+  #about {
+    margin: 0 10%;
+  }
 }
 
 .content {
@@ -288,29 +285,31 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 90vh;
 }
 
 .content img {
-  width: 35%;
+  width: 30%;
   border-radius: 5%;
 }
 
 .content p {
-  padding: 1em;
   width: 20vw;
-  font-size: 1.5em;
+  font-size: 20px;
 }
 
 @media (max-width: 1024px) {
   .content {
     margin-top: 2em;
+    height: auto;
   }
   .content img {
-    width: 40%;
+    width: 20%;
     height: auto;
   }
   .content p {
-    font-size: 1em;
+    font-size: 24px;
+    width: 30vw;
   }
 }
 
@@ -324,12 +323,19 @@ nav {
         -ms-flex-align: center;
             align-items: center;
   }
+  .content h2 {
+    text-align: center;
+    margin-top: 0.5em;
+  }
   .content img {
-    width: 100%;
+    width: 75%;
     height: auto;
   }
   .content p {
-    width: 100%;
+    width: 70vw;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

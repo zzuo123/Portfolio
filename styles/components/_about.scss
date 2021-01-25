@@ -1,34 +1,40 @@
 #about {
-	margin     : 0 18%;
+	margin     : 0;
 	padding-top: 5em;
+
+	@include lg {
+		margin: 0 10%;
+	}
 }
 
 .content {
 	display        : flex;
 	justify-content: space-evenly;
 	align-items    : center;
+	height         : 90vh;
 
 	img {
-		width        : 35%;
+		width        : 30%;
 		border-radius: 5%;
 	}
 
 	p {
-		padding  : 1em;
 		width    : 20vw;
-		font-size: 1.5em;
+		font-size: $paragraph-text;
 	}
 
 	@include lg {
 		margin-top: 2em;
+		height    : auto;
 
 		img {
-			width : 40%;
+			width : 20%;
 			height: auto;
 		}
 
 		p {
-			font-size: 1em;
+			font-size: $sm-text*1.5;
+			width    : 30vw;
 		}
 	}
 
@@ -36,13 +42,21 @@
 		flex-direction: column;
 		align-items   : center;
 
+		h2 {
+			text-align: center;
+			margin-top: 0.5em;
+		}
+
 		img {
-			width : 100%;
+			width : 75%;
 			height: auto;
 		}
 
 		p {
-			width: 100%;
+			width     : 70vw;
+			font-size : $sm-text;
+			text-align: left;
+			margin    : 0;
 		}
 	}
 }

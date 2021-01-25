@@ -4,22 +4,23 @@
 	align-items     : center;
 	height          : 90vh;
 	width           : 100vw;
-	background-color: $homebg;
-	color           : $whitetext;
+	background-color: $light-background-color;
+	color           : white;
 	font-family     : 'Montserrat Alternates', sans-serif;
 }
 
 #header {
 	height   : fit-content;
 	width    : fit-content;
-	font-size: 5em;
+	font-size: $xl-text*1.2;
 
 	@include lg {
-		font-size: 3em;
+		font-size: $xl-text;
 	}
 
 	@include md {
-		font-size: 2em;
+		text-align: center;
+		font-size : $md-text + 8px;
 	}
 
 	a {

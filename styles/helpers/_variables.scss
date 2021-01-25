@@ -8,6 +8,15 @@ $screen-lg-min: 1024px;
 $screen-xl-min: 1200px;
 
 // ----------- colors -------------
-$navbarbg: #06D6A0;
-$homebg  : #68B4A0;
-$whitetext: rgb(226, 226, 226);
+$dark-background-color  : #197DB3;
+$light-background-color : #57C4FF;
+$complementary          : #FFAA3D;
+$greywhite              : #e2e2e2;
+
+// ----------- font size ------------
+$sm-text: 16px;
+$md-text: 32px;
+$lg-text: 48px;
+$xl-text: 64px;
+
+$paragraph-text: $sm-text+4px;

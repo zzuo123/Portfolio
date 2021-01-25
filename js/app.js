@@ -1,6 +1,7 @@
 const navSlide = () => {
 	const burger = document.querySelector('.burger');
 	const nav = document.querySelector('.nav-links');
+	const body = document.querySelector('html');
 	const navLinks = document.querySelectorAll('.nav-links li');
 	const triggers = document.querySelectorAll('.trigger');
 
@@ -19,6 +20,11 @@ const navSlide = () => {
 	});
 
 	burger.addEventListener('click', () => {
+		if (body.style.overflowY == "") {
+			body.style.overflowY = 'hidden';
+		} else {
+			body.style.overflowY = "";
+		}
 		// animate links using keyframe called navLinkFade
 		navLinks.forEach((link, index) => {
 			if (link.style.animation) {

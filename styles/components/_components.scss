@@ -28,16 +28,6 @@
 	height    : 0;
 }
 
-.title {
-	font-size : 3em;
-	margin    : 0 0 0.5em 0;
-	text-align: center;
-
-	@include lg {
-		margin: 0;
-	}
-}
-
 @import "./navbar";
 @import "./home";
 @import "./about";
