@@ -21,7 +21,7 @@ body {
 }
 
 .svg-btn img {
-  position: relative;
+  position: absolute;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
@@ -46,8 +46,6 @@ body {
   font-size: 3em;
   margin: 0 0 0.5em 0;
   text-align: center;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 @media (max-width: 1024px) {
@@ -271,6 +269,7 @@ nav {
 
 #about {
   margin: 0 10%;
+  padding-top: 5em;
 }
 
 .content {

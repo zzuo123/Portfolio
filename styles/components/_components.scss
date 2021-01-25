@@ -5,7 +5,7 @@
 	justify-content: center;
 
 	img {
-		position : relative;
+		position : absolute;
 		transform: translateY(-50%);
 		cursor   : pointer;
 		width    : 8%;
@@ -28,7 +28,6 @@
 	font-size : 3em;
 	margin    : 0 0 0.5em 0;
 	text-align: center;
-	transform : translateY(-50%);
 
 	@include lg {
 		margin: 0;
