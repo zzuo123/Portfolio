@@ -8,22 +8,28 @@ const navSlide = () => {
 		link.addEventListener('click', () => {
 			// toggle nav (add if class not exist, remove if it does)
 			nav.classList.toggle('nav-active');
-
-			// animate links using keyframe called navLinkFade
-			navLinks.forEach((link, index) => {
+			navLinks.forEach(link => {
 				if (link.style.animation) {
-					// remove animation closed
 					link.style.animation = '';
-				} else {
-					// "index / 7 + 0.2" delay fading in of links based on index (top first, bottom last)
-					link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
 				}
 			});
-
 			// burger animation
 			burger.classList.toggle('toggle');
 		});
-	})
+	});
+
+	burger.addEventListener('click', () => {
+		// animate links using keyframe called navLinkFade
+		navLinks.forEach((link, index) => {
+			if (link.style.animation) {
+				// remove animation closed
+				link.style.animation = '';
+			} else {
+				// "index / 7 + 0.2" delay fading in of links based on index (top first, bottom last)
+				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+			}
+		});
+	});
 }
 
 class TxtType {

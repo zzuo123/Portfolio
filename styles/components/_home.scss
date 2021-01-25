@@ -2,18 +2,11 @@
 	display         : flex;
 	justify-content : center;
 	align-items     : center;
-	height          : 35em;
+	height          : 90vh;
 	width           : 100vw;
-	background-color: #68B4A0;
-	color           : white;
-
-	@include lg {
-		height: 25em;
-	}
-
-	@include md {
-		height: 20em;
-	}
+	background-color: $homebg;
+	color           : $whitetext;
+	font-family     : 'Montserrat Alternates', sans-serif;
 }
 
 #header {
@@ -59,4 +52,10 @@
 	top           : -15vh;
 	/* visibility : hidden; */
 	padding-top   : 12vh;
+}
+
+@keyframes blinker {
+	50% {
+		border-right: 0px;
+	}
 }

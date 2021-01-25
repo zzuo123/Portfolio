@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap");
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -5,6 +7,7 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -22,8 +25,6 @@ nav {
   min-height: 8vh;
   width: 100%;
   background-color: #06D6A0;
-  /* This is only applied to the content of nav */
-  font-family: 'Poppins', sans-serif;
 }
 
 .logo {
@@ -175,22 +176,11 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 35em;
+  height: 90vh;
   width: 100vw;
   background-color: #68B4A0;
-  color: white;
-}
-
-@media (max-width: 1024px) {
-  .center {
-    height: 25em;
-  }
-}
-
-@media (max-width: 768px) {
-  .center {
-    height: 20em;
-  }
+  color: #e2e2e2;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #header {
@@ -251,5 +241,21 @@ nav {
   top: -15vh;
   /* visibility : hidden; */
   padding-top: 12vh;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    border-right: 0px;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    border-right: 0px;
+  }
+}
+
+#about h2 {
+  font-size: 3em;
 }
 /*# sourceMappingURL=style.css.map */
