@@ -10,6 +10,52 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.svg-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.svg-btn img {
+  position: relative;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  width: 8%;
+  z-index: 990;
+}
+
+@media (max-width: 1024px) {
+  .svg-btn img {
+    width: 15%;
+  }
+}
+
+.anchor {
+  position: relative;
+  visibility: hidden;
+  top: -15vh;
+  height: 0;
+}
+
+.title {
+  font-size: 3em;
+  margin: 0 0 0.5em 0;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+  .title {
+    margin: 0;
+  }
+}
+
 nav {
   position: fixed;
   top: 0px;
@@ -211,38 +257,6 @@ nav {
   cursor: default;
 }
 
-.svg-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.svg-btn img {
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-  width: 8%;
-  z-index: 990;
-}
-
-@media (max-width: 1024px) {
-  .svg-btn img {
-    width: 15%;
-  }
-}
-
-.anchor {
-  display: block;
-  position: relative;
-  top: -15vh;
-  /* visibility : hidden; */
-  padding-top: 12vh;
-}
-
 @-webkit-keyframes blinker {
   50% {
     border-right: 0px;
@@ -255,7 +269,54 @@ nav {
   }
 }
 
-#about h2 {
-  font-size: 3em;
+#about {
+  margin: 0 10%;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content img {
+  height: 70vh;
+  border-radius: 5%;
+}
+
+.content p {
+  padding: 1em;
+  width: 30vw;
+  font-size: 1.5em;
+}
+
+@media (max-width: 1024px) {
+  .content p {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+  .content p {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

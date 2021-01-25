@@ -29,31 +29,6 @@
 	}
 }
 
-.svg-btn {
-	display        : flex;
-	width          : 100%;
-	justify-content: center;
-
-	img {
-		transform: translateY(-50%);
-		cursor   : pointer;
-		width    : 8%;
-		z-index  : 990;
-
-		@include lg {
-			width: 15%;
-		}
-	}
-}
-
-.anchor {
-	display       : block;
-	position      : relative;
-	top           : -15vh;
-	/* visibility : hidden; */
-	padding-top   : 12vh;
-}
-
 @keyframes blinker {
 	50% {
 		border-right: 0px;
