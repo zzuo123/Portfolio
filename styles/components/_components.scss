@@ -11,8 +11,12 @@
 		width    : 8%;
 		z-index  : 990;
 
-		@include lg {
+		@include md {
 			width: 15%;
+		}
+
+		@include sm {
+			width: 20%;
 		}
 	}
 }

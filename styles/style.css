@@ -29,9 +29,15 @@ body {
   z-index: 990;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .svg-btn img {
     width: 15%;
+  }
+}
+
+@media (max-width: 576px) {
+  .svg-btn img {
+    width: 20%;
   }
 }
 
@@ -268,7 +274,7 @@ nav {
 }
 
 #about {
-  margin: 0 10%;
+  margin: 0 18%;
   padding-top: 5em;
 }
 
@@ -276,27 +282,35 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .content img {
-  height: 70vh;
+  width: 35%;
   border-radius: 5%;
 }
 
 .content p {
   padding: 1em;
-  width: 30vw;
+  width: 20vw;
   font-size: 1.5em;
 }
 
 @media (max-width: 1024px) {
+  .content {
+    margin-top: 2em;
+  }
+  .content img {
+    width: 40%;
+    height: auto;
+  }
   .content p {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
 
