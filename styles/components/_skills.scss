@@ -16,4 +16,8 @@
 		background-color: $dark-background-color;
 		color           : $greywhite;
 	}
+
+	@include md {
+		margin-bottom: 2em;
+	}
 }

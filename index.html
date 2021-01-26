@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<title>Zhiyang Zuo</title>
 </head>
@@ -20,6 +21,7 @@
 			<li> <a class="trigger" href="#about-anchor">About</a> </li>
 			<li> <a class="trigger" href="#skills-anchor">Skills</a> </li>
 			<li> <a class="trigger" href="#works-anchor">Works</a> </li>
+			<li> <a class="trigger" href="#bottom-anchor">Contact</a> </li>
 		</ul>
 		<div class="burger trigger">
 			<div class="line1"></div>
@@ -87,15 +89,39 @@
 		</div>
 		<div class="anchor" id="works-anchor"></div>
 	</div>
-	<div class="page" id="works-page" style="background-color: wheat;">
+	<div class="page" id="works-page">
 		<div class="content">
-			<h2>My works:</h2>
+			<h2>What I worked on:</h2>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" id="slide1">Slide 1</div>
+					<div class="swiper-slide" id="slide2">Slide 2</div>
+					<div class="swiper-slide" id="slide3">Slide 3</div>
+					<div class="swiper-slide" id="slide4">Slide 4</div>
+					<div class="swiper-slide" id="slide5">Slide 5</div>
+				</div>
+				<!-- Add Pagination and arrows -->
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
 		</div>
 		<div class="next-page"><a href="#bottom-anchor"><img src="./images/downbutton.svg" /></a>
 		</div>
 		<div class="anchor" id="bottom-anchor"></div>
 	</div>
+	<div class="page" id="contact-page">
+		<div class="content">
+			<div id="contact-left">
+				<h2>hello</h2>
+			</div>
+			<div id="contact-right">
+				<h2>hi</h2>
+			</div>
+		</div>
+	</div>
 	<script src="./js/app.js"></script>
+	<script src="./js/swiper.js" type="module"></script>
 </body>
 
 </html>

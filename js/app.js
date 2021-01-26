@@ -5,22 +5,6 @@ const navSlide = () => {
 	const navLinks = document.querySelectorAll('.nav-links li');
 	const triggers = document.querySelectorAll('.trigger');
 
-	// triggers.forEach(link => {
-	// 	link.addEventListener('click', () => {
-	// 		if (body.style.overflowY == "") {
-	// 			body.style.overflowY = 'hidden';
-	// 		} else {
-	// 			body.style.overflowY = "";
-	// 		}
-	// 		navLinks.forEach(link => {
-	// 			if (link.style.animation) {
-	// 				// remove animation closed
-	// 				link.style.animation = '';
-	// 			}
-	// 		});
-	// 	});
-	// });
-
 	burger.addEventListener('click', () => {
 		if (body.style.overflowY == "") {
 			body.style.overflowY = 'hidden';
