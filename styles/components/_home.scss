@@ -1,24 +1,24 @@
-.center {
-	display         : flex;
-	justify-content : center;
-	align-items     : center;
-	height          : 90vh;
-	width           : 100vw;
-	background-color: $light-background-color;
-	color           : white;
-	font-family     : 'Montserrat Alternates', sans-serif;
+#home-anchor {
+	// it takes up the height of the navbar
+	height: $navbar-height;
+}
+
+#home-page .content {
+	margin     : 0 !important;
+	color      : white;
+	font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #header {
-	height   : fit-content;
-	width    : fit-content;
 	font-size: $xl-text*1.2;
+	transform: translateY(-1em);
 
 	@include lg {
 		font-size: $xl-text;
 	}
 
 	@include md {
+		translate : none;
 		text-align: center;
 		font-size : $md-text + 8px;
 	}
