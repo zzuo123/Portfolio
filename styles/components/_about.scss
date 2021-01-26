@@ -1,62 +1,40 @@
-#about {
-	margin     : 0;
-	padding-top: 5em;
+#about-page {
+	background-color: $greywhite;
 
-	@include lg {
-		margin: 0 10%;
-	}
-}
+	.content {
+		justify-content: space-between;
 
-.content {
-	display        : flex;
-	justify-content: space-evenly;
-	align-items    : center;
-	height         : 90vh;
-
-	img {
-		width        : 30%;
-		border-radius: 5%;
-	}
-
-	p {
-		width    : 20vw;
-		font-size: $paragraph-text;
-	}
-
-	@include lg {
-		margin-top: 2em;
-		height    : auto;
-
-		img {
-			width : 20%;
-			height: auto;
+		#my-photo {
+			width        : 40%;
+			border-radius: 5%;
 		}
 
-		p {
-			font-size: $sm-text*1.5;
-			width    : 30vw;
-		}
-	}
-
-	@include md {
-		flex-direction: column;
-		align-items   : center;
-
-		h2 {
-			text-align: center;
-			margin-top: 0.5em;
+		#about-text {
+			width    : 50%;
+			font-size: $sm-text;
 		}
 
-		img {
-			width : 75%;
-			height: auto;
-		}
+		@include sm {
+			flex-direction : column;
+			align-items    : center;
+			justify-content: space-around;
 
-		p {
-			width     : 70vw;
-			font-size : $sm-text;
-			text-align: left;
-			margin    : 0;
+			#about-title {
+				text-align: center;
+				margin-top: 0.5em;
+			}
+
+			#my-photo {
+				width : 100%;
+				height: auto;
+			}
+
+			#about-text {
+				width        : 70vw;
+				font-size    : $sm-text;
+				text-align   : left;
+				margin-bottom: 1em;
+			}
 		}
 	}
 }

@@ -5,7 +5,7 @@ nav {
 	display         : flex;
 	justify-content : space-around;
 	align-items     : center;
-	min-height      : 8vh;
+	height          : $navbar-height;
 	width           : 100%;
 	background-color: $dark-background-color;
 }
@@ -31,8 +31,9 @@ nav {
 	@include md {
 		position        : absolute;
 		/* 100vh(display box height) - 8vh(nav height) */
-		height          : 92vh;
-		top             : 6vh;
+		height          : 100vh-$navbar-height;
+		// for some reason we need to subtract 2
+		top             : $navbar-height - 2vh;
 		background-color: $dark-background-color;
 		display         : flex;
 		flex-direction  : column;

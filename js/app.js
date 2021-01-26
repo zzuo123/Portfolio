@@ -7,24 +7,25 @@ const navSlide = () => {
 
 	triggers.forEach(link => {
 		link.addEventListener('click', () => {
-			// toggle nav (add if class not exist, remove if it does)
-			nav.classList.toggle('nav-active');
+			if (body.style.overflowY == "") {
+				body.style.overflowY = 'hidden';
+			} else {
+				body.style.overflowY = "";
+			}
 			navLinks.forEach(link => {
 				if (link.style.animation) {
+					// remove animation closed
 					link.style.animation = '';
 				}
 			});
+			// toggle nav (add if class not exist, remove if it does)
+			nav.classList.toggle('nav-active');
 			// burger animation
 			burger.classList.toggle('toggle');
 		});
 	});
 
 	burger.addEventListener('click', () => {
-		if (body.style.overflowY == "") {
-			body.style.overflowY = 'hidden';
-		} else {
-			body.style.overflowY = "";
-		}
 		// animate links using keyframe called navLinkFade
 		navLinks.forEach((link, index) => {
 			if (link.style.animation) {
