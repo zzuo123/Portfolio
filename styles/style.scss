@@ -1,0 +1,14 @@
+html {
+	overflow-x     : hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin     : 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+@import "./helpers/imports";
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./components/components"

@@ -1,0 +1,37 @@
+#home-anchor {
+	// it takes up the height of the navbar
+	height: $navbar-height;
+}
+
+#home-page .content {
+	margin     : 0 !important;
+	color      : white;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#header {
+	font-size: $xl-text*1.2;
+	transform: translateY(-1em);
+
+	@include lg {
+		font-size: $xl-text;
+	}
+
+	@include md {
+		translate : none;
+		text-align: center;
+		font-size : $md-text + 8px;
+	}
+
+	a {
+		text-decoration: none;
+		color          : white;
+		cursor         : default;
+	}
+}
+
+@keyframes blinker {
+	50% {
+		border-right: 0px;
+	}
+}

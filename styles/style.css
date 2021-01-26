@@ -1,1 +1,328 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap");
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page {
+  background-color: #57C4FF;
+}
+
+.page .content {
+  height: 81vh;
+  margin: 0 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page .next-page {
+  position: relative;
+  height: 11vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page .next-page img {
+  margin-bottom: 3vh;
+  height: 8vh;
+}
+
+.page .anchor {
+  position: relative;
+  height: 0;
+  bottom: 8vh;
+}
+
+.bubble-button {
+  text-decoration: none;
+  color: #e2e2e2;
+  background-color: #197DB3;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+}
+
+.bubble-button:hover {
+  color: white;
+  background-color: #57C4FF;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+@media (max-width: 768px) {
+  .bubble-button {
+    font-size: 12px;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8vh;
+  width: 100%;
+  background-color: #197DB3;
+}
+
+.logo {
+  color: #e2e2e2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 30%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    /* 100vh(display box height) - 8vh(nav height) */
+    height: 92vh;
+    top: 6vh;
+    background-color: #197DB3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 0px;
+    /* Hide the navlinks to the right side and transition it back in when mouse click on burger */
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links li {
+    opacity: 0;
+  }
+}
+
+.nav-links a {
+  color: #e2e2e2;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.burger {
+  /* when screen width is long, we don't display burger */
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #e2e2e2;
+  margin: 5px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(45deg) translate(5px, 6px);
+          transform: rotate(45deg) translate(5px, 6px);
+  width: 28px;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(-45deg) translate(5px, -6px);
+          transform: rotate(-45deg) translate(5px, -6px);
+  width: 28px;
+}
+
+/* show the navlinks (color purple thing) hidden to the right */
+.nav-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#home-anchor {
+  height: 8vh;
+}
+
+#home-page .content {
+  margin: 0 !important;
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#header {
+  font-size: 76.8px;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+@media (max-width: 992px) {
+  #header {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    translate: none;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+#header a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    border-right: 0px;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    border-right: 0px;
+  }
+}
+
+#about-page {
+  background-color: #e2e2e2;
+}
+
+#about-page .content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about-page .content #my-photo {
+  width: 40%;
+  border-radius: 5%;
+}
+
+#about-page .content #about-text {
+  width: 50%;
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  #about-page .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #about-page .content #about-title {
+    text-align: center;
+    margin-top: 0.5em;
+  }
+  #about-page .content #my-photo {
+    width: 100%;
+    height: auto;
+  }
+  #about-page .content #about-text {
+    width: 70vw;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

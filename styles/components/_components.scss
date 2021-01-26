@@ -1,0 +1,54 @@
+.page {
+	background-color: $light-background-color;
+
+	.content {
+		// subtract navbar height and next-page height
+		height         : 100vh - $navbar-height * 2 - $button-margin;
+		margin         : 0 25vw;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+	}
+
+	.next-page {
+		position       : relative;
+		height         : $navbar-height + $button-margin;
+		bottom         : 0;
+		display        : flex;
+		justify-content: center;
+
+		img {
+			margin-bottom: $button-margin;
+			height       : 8vh;
+		}
+	}
+
+	.anchor {
+		position: relative;
+		height  : 0;
+		bottom  : $navbar-height;
+	}
+}
+
+.bubble-button {
+	text-decoration : none;
+	color           : $greywhite;
+	background-color: $dark-background-color;
+	padding         : 0.5em 1em;
+	border-radius   : 20px;
+
+	&:hover {
+		color              : white;
+		background-color   : $light-background-color;
+		transition         : background-color 200ms linear;
+		// transition      : color 1s linear;
+	}
+
+	@include md {
+		font-size: $sm-text - 4px;
+	}
+}
+
+@import "./navbar";
+@import "./home";
+@import "./about";

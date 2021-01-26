@@ -1,0 +1,24 @@
+// ----------- screen sizes ------------
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+// ----------- colors -------------
+$dark-background-color  : #197DB3;
+$light-background-color : #57C4FF;
+$complementary          : #FFAA3D;
+$greywhite              : #e2e2e2;
+
+// ----------- font size ------------
+$sm-text: 16px;
+$md-text: 32px;
+$lg-text: 48px;
+$xl-text: 64px;
+
+// ------------ element size -----------
+$navbar-height: 8vh;
+$button-margin: 3vh;
