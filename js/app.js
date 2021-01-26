@@ -5,27 +5,28 @@ const navSlide = () => {
 	const navLinks = document.querySelectorAll('.nav-links li');
 	const triggers = document.querySelectorAll('.trigger');
 
-	triggers.forEach(link => {
-		link.addEventListener('click', () => {
-			if (body.style.overflowY == "") {
-				body.style.overflowY = 'hidden';
-			} else {
-				body.style.overflowY = "";
-			}
-			navLinks.forEach(link => {
-				if (link.style.animation) {
-					// remove animation closed
-					link.style.animation = '';
-				}
-			});
-			// toggle nav (add if class not exist, remove if it does)
-			nav.classList.toggle('nav-active');
-			// burger animation
-			burger.classList.toggle('toggle');
-		});
-	});
+	// triggers.forEach(link => {
+	// 	link.addEventListener('click', () => {
+	// 		if (body.style.overflowY == "") {
+	// 			body.style.overflowY = 'hidden';
+	// 		} else {
+	// 			body.style.overflowY = "";
+	// 		}
+	// 		navLinks.forEach(link => {
+	// 			if (link.style.animation) {
+	// 				// remove animation closed
+	// 				link.style.animation = '';
+	// 			}
+	// 		});
+	// 	});
+	// });
 
 	burger.addEventListener('click', () => {
+		if (body.style.overflowY == "") {
+			body.style.overflowY = 'hidden';
+		} else {
+			body.style.overflowY = "";
+		}
 		// animate links using keyframe called navLinkFade
 		navLinks.forEach((link, index) => {
 			if (link.style.animation) {
@@ -35,7 +36,19 @@ const navSlide = () => {
 				// "index / 7 + 0.2" delay fading in of links based on index (top first, bottom last)
 				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
 			}
+			link.addEventListener('click', () => {
+				body.style.overflowY = "";
+				navLinks.forEach(l => {
+					l.style.animation = '';
+				})
+				nav.classList.remove('nav-active');
+				burger.classList.remove('toggle');
+			})
 		});
+		// toggle nav (add if class not exist, remove if it does)
+		nav.classList.toggle('nav-active');
+		// burger animation
+		burger.classList.toggle('toggle');
 	});
 }
 

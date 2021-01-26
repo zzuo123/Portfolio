@@ -15,7 +15,7 @@ body {
 }
 
 .page .content {
-  height: 81vh;
+  min-height: 81vh;
   margin: 0 25vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,24 +52,23 @@ body {
 }
 
 .bubble-button {
-  text-decoration: none;
-  color: #e2e2e2;
   background-color: #197DB3;
   padding: 0.5em 1em;
   border-radius: 20px;
-}
-
-.bubble-button:hover {
-  color: white;
-  background-color: #57C4FF;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media (max-width: 768px) {
   .bubble-button {
     font-size: 12px;
   }
+}
+
+.bubble-button a {
+  color: #e2e2e2;
+  text-decoration: none;
 }
 
 nav {
@@ -298,6 +297,18 @@ nav {
   font-size: 16px;
 }
 
+#about-page .content #about-text .bubble-button {
+  -webkit-box-shadow: 0 7px #999;
+          box-shadow: 0 7px #999;
+}
+
+#about-page .content #about-text .bubble-button:active {
+  -webkit-box-shadow: 0 3px #666;
+          box-shadow: 0 3px #666;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
 @media (max-width: 576px) {
   #about-page .content {
     -webkit-box-orient: vertical;
@@ -324,5 +335,30 @@ nav {
     text-align: left;
     margin-bottom: 1em;
   }
+}
+
+#skills-page .content {
+  margin: 0 10vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#skills-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2em;
+  width: 100%;
+}
+
+#skills-grid .skills-item {
+  border-radius: 32px;
+  padding: 0 16px;
+  height: 400px;
+  background-color: #197DB3;
+  color: #e2e2e2;
 }
 /*# sourceMappingURL=style.css.map */

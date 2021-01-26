@@ -12,6 +12,15 @@
 		#about-text {
 			width    : 50%;
 			font-size: $sm-text;
+
+			.bubble-button {
+				box-shadow: 0 7px #999;
+
+				&:active {
+					box-shadow: 0 3px #666;
+					transform : translateY(4px);
+				}
+			}
 		}
 
 		@include sm {

@@ -1,0 +1,19 @@
+#skills-page .content {
+	margin        : 0 10vw;
+	flex-direction: column;
+}
+
+#skills-grid {
+	display              : grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap             : 2em;
+	width                : 100%;
+
+	.skills-item {
+		border-radius   : $md-text;
+		padding         : 0 $sm-text;
+		height          : 400px;
+		background-color: $dark-background-color;
+		color           : $greywhite;
+	}
+}

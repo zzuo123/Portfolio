@@ -3,7 +3,7 @@
 
 	.content {
 		// subtract navbar height and next-page height
-		height         : 100vh - $navbar-height * 2 - $button-margin;
+		min-height     : 100vh - $navbar-height * 2 - $button-margin;
 		margin         : 0 25vw;
 		display        : flex;
 		align-items    : center;
@@ -31,24 +31,22 @@
 }
 
 .bubble-button {
-	text-decoration : none;
-	color           : $greywhite;
 	background-color: $dark-background-color;
 	padding         : 0.5em 1em;
 	border-radius   : 20px;
-
-	&:hover {
-		color              : white;
-		background-color   : $light-background-color;
-		transition         : background-color 200ms linear;
-		// transition      : color 1s linear;
-	}
+	width           : fit-content;
 
 	@include md {
 		font-size: $sm-text - 4px;
+	}
+
+	a {
+		color          : $greywhite;
+		text-decoration: none;
 	}
 }
 
 @import "./navbar";
 @import "./home";
 @import "./about";
+@import "./skills";
