@@ -3,7 +3,6 @@ const navSlide = () => {
 	const nav = document.querySelector('.nav-links');
 	const body = document.querySelector('html');
 	const navLinks = document.querySelectorAll('.nav-links li');
-	const triggers = document.querySelectorAll('.trigger');
 
 	burger.addEventListener('click', () => {
 		if (body.style.overflowY == "") {
@@ -94,9 +93,21 @@ const editor = () => {
 	document.body.appendChild(css);
 }
 
+const random_bg = () => {
+	const items = document.querySelectorAll('.randombg');
+	items.forEach(item => {
+		var x = Math.floor(Math.random() * 256);
+		var y = Math.floor(Math.random() * 256);
+		var z = Math.floor(Math.random() * 256);
+		var bgColor = "rgba(" + x + "," + y + "," + z + ", 0.5)";
+		item.style.background = bgColor;
+	});
+}
+
 const app = () => {
-	editor()
+	editor();
 	navSlide();
+	random_bg();
 }
 
 window.onload = app();

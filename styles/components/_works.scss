@@ -23,42 +23,124 @@
 }
 
 .swiper-slide {
-	width          : 100%;
-	text-align     : center;
-	font-size      : 18px;
-	background     : #fff;
+	text-align: center;
+	font-size : 18px;
+	background: #fff;
+}
+
+#work-wrapper .swiper-slide {
+	// only to center image
 	display        : flex;
 	justify-content: center;
-	align-items    : center;
+
+	.work-background {
+		height    : 100%;
+		object-fit: cover;
+		overflow-x: hidden;
+		transform : scale(1);
+		transition: transform 0.5s linear;
+
+		&:hover {
+			transform : scale(1.3);
+			transition: transform 0.5s linear;
+		}
+	}
+
+	.work-github {
+		position        : absolute;
+		top             : 0;
+		right           : 0;
+		width           : 10%;
+		height          : auto;
+		border-radius   : 50%;
+		background-color: rgba(0, 0, 0, 0.5);
+		transform       : scale(1);
+		transition      : transform 0.5s linear;
+
+		&:hover {
+			transform : scale(1.1);
+			transition: transform 0.5s linear;
+		}
+
+		@include md {
+			width: 15%;
+		}
+	}
+
+	.work-text {
+		position        : absolute;
+		bottom          : 0;
+		padding-bottom  : 2em;
+		width           : 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		font-size       : $sm-text;
+		color           : $greywhite;
+
+		h2,
+		p {
+			padding: 0 5em;
+		}
+
+		p {
+			text-align: left;
+		}
+
+		@include md {
+
+			h2,
+			p {
+				padding: 0 1em;
+			}
+		}
+	}
+
+	.work-bottom {
+		display       : flex;
+		flex-direction: row;
+		align-items   : center;
+
+		a {
+			color          : $greywhite;
+			text-decoration: underline;
+		}
+
+		.work-skills {
+			display        : flex;
+			flex-direction : row;
+			flex-wrap      : wrap;
+			justify-content: flex-start;
+			width          : 50%;
+
+			div {
+				border-radius: 10px;
+				width        : fit-content;
+				padding      : 3px;
+				margin-right : 5px;
+				margin-bottom: 3px;
+			}
+		}
+	}
 }
 
-#slide1 {
-	background     : url("../../images/skiing_profile.jpg");
-	background-size: cover;
-}
+.swiper-button-next,
+.swiper-button-prev {
+	color           : $greywhite;
+	width           : 2em;
+	height          : 2em;
+	border-radius   : 50%;
+	background-color: rgba(0, 0, 0, 0.5);
 
-#slide2 {
-	background: red;
-}
-
-#slide3 {
-	background: orange;
-}
-
-#slide4 {
-	background: purple;
-}
-
-#slide5 {
-	background: blue;
+	&:hover {
+		background-color: rgba(0, 0, 0, 1);
+	}
 }
 
 .swiper-button-next {
-	color: $greywhite;
+	padding: 0.9em 0.7em 0.9em 1.1em;
 }
 
 .swiper-button-prev {
-	color: $greywhite;
+	padding: 0.9em 1.1em 0.9em 0.7em;
 }
 
 .swiper-pagination-bullet-active {

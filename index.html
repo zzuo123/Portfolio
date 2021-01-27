@@ -17,13 +17,13 @@
 			<h4>&#x1F451&#x1F4A9&#x1F4BB Zhiyang Zuo</h4>
 		</div>
 		<ul class="nav-links">
-			<li> <a class="trigger" href="#home-anchor">Home</a> </li>
-			<li> <a class="trigger" href="#about-anchor">About</a> </li>
-			<li> <a class="trigger" href="#skills-anchor">Skills</a> </li>
-			<li> <a class="trigger" href="#works-anchor">Works</a> </li>
-			<li> <a class="trigger" href="#bottom-anchor">Contact</a> </li>
+			<li> <a href="#home-anchor">Home</a> </li>
+			<li> <a href="#about-anchor">About</a> </li>
+			<li> <a href="#skills-anchor">Skills</a> </li>
+			<li> <a href="#works-anchor">Works</a> </li>
+			<li> <a href="#bottom-anchor">Contact</a> </li>
 		</ul>
-		<div class="burger trigger">
+		<div class="burger">
 			<div class="line1"></div>
 			<div class="line2"></div>
 			<div class="line3"></div>
@@ -47,11 +47,11 @@
 			<img src="./images/skiing_profile.jpg" alt="Zhiyang Picture" id="my-photo">
 			<div id="about-text">
 				<h2>Who am I:</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum incidunt, eius
-					animi
-					magni vel
-					expedita minima ducimus, suscipit voluptates cumque doloribus sapiente facilis et facere dolores
-					eligendi nisi exercitationem!</p>
+				<p>I am a student at University of Massachusetts Amherst majoring in Computer Science (BS). In my free
+					time, I like to code up some Python script that "Automate the Boring Stuff" for me, or create some
+					"not so useful" websites for fun. When I am not in front of my computer, I like to hike in the
+					mountains, ride my bike around, or just chill at home and watch Netflix.
+				</p>
 				<div class="bubble-button">
 					<a href="http://www.google.com" target="_blank">Download my CV</a>
 				</div>
@@ -66,22 +66,41 @@
 			<h2>What I know:</h2>
 			<div id="skills-grid">
 				<div class="skills-item">
-					<h2>Software Engineering</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa labore cupiditate exercitationem
-						voluptatibus, illo officiis maxime iure fugit, cumque velit quia suscipit maiores rerum,
-						delectus distinctio iste blanditiis ad quam.</p>
+					<h2>Key Skills</h2>
+					<ul>
+						<li>Object Oriented Programming</li>
+						<li>Software testing and debugging</li>
+						<li>User Interface design</li>
+						<li>Problem solving and logics</li>
+						<li>Teamwork and collaboration</li>
+						<li>Written and verbal communication</li>
+						<li>Agile Development</li>
+					</ul>
 				</div>
 				<div class="skills-item">
-					<h2>Web Development</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa labore cupiditate exercitationem
-						voluptatibus, illo officiis maxime iure fugit, cumque velit quia suscipit maiores rerum,
-						delectus distinctio iste blanditiis ad quam.</p>
+					<h2>Programming Languages</h2>
+					<ul>
+						<li>Python</li>
+						<li>Java</li>
+						<li>C</li>
+						<li>SQL (PostgreSQL)</li>
+						<li>HTML</li>
+						<li>CSS (and SASS)</li>
+						<li>Javascript</li>
+						<li>Shell Scripting (bash and cmd)</li>
+					</ul>
 				</div>
 				<div class="skills-item">
 					<h2>Tools</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa labore cupiditate exercitationem
-						voluptatibus, illo officiis maxime iure fugit, cumque velit quia suscipit maiores rerum,
-						delectus distinctio iste blanditiis ad quam.</p>
+					<ul>
+						<li>IntelliJ</li>
+						<li>Pycharm</li>
+						<li>VSCode</li>
+						<li>Vim</li>
+						<li>Git (and GitHub)</li>
+						<li>Figma</li>
+						<li>Ubuntu Linux</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -93,12 +112,98 @@
 		<div class="content">
 			<h2>What I worked on:</h2>
 			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" id="slide1">Slide 1</div>
-					<div class="swiper-slide" id="slide2">Slide 2</div>
-					<div class="swiper-slide" id="slide3">Slide 3</div>
-					<div class="swiper-slide" id="slide4">Slide 4</div>
-					<div class="swiper-slide" id="slide5">Slide 5</div>
+				<div class="swiper-wrapper" id="work-wrapper">
+					<div class="swiper-slide">
+						<img class="work-background" src="./images/demo/dailyapp.png" alt="Daily App Image">
+						<a href="http://github.com/zzuo123/DailyApp" target="_blank"><img class="work-github"
+								src="./images/github.svg" alt="Github Image"></a>
+						<div class="work-text">
+							<h2>Daily App</h2>
+							<p>
+								A Python Flask web app deployed on Heroku that helps its users to keep diaries, track
+								weather and time.
+							</p>
+							<div class="work-bottom">
+								<p>Deplyment link: <a href="http://daily-app-twd.herokuapp.com/home"
+										target="_blank">here</a></p>
+								<div class="work-skills">
+									<div class="randombg">Python</div>
+									<div class="randombg">Flask</div>
+									<div class="randombg">PostgreSQL</div>
+									<div class="randombg">API</div>
+									<div class="randombg">Bootstrap</div>
+									<div class="randombg">Heroku</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img class="work-background" src="./images/demo/gradecalc.png" alt="Grade Calc Image">
+						<a href="https://github.com/zzuo123/tiny_sites/tree/master/CSGradeCalc" target="_blank"><img
+								class="work-github" src="./images/github.svg" alt="Github Image"></a>
+						<div class="work-text">
+							<h2>Grade Calculator</h2>
+							<p>
+								A static website that takes in grade for each section of the class (cs230 at UMass) and
+								generate a final report. It's used to get an estimate of final grade before official
+								grade come out.
+							</p>
+							<div class="work-bottom">
+								<p>Deplyment link: <a href="https://zzuo123.github.io/tiny_sites/CSGradeCalc/index.html"
+										target="_blank">here</a></p>
+								<div class="work-skills">
+									<div class="randombg">HTML</div>
+									<div class="randombg">CSS</div>
+									<div class="randombg">Javascript</div>
+									<div class="randombg">GitHub</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img class="work-background" src="./images/demo/python.jpeg" alt="Python Image">
+						<a href="https://github.com/zzuo123/MclipPlusPlus" target="_blank"><img class="work-github"
+								src="./images/github.svg" alt="Github Image"></a>
+						<div class="work-text">
+							<h2>Mclip Plus Plus</h2>
+							<p>
+								A Python command line clipboard app that allows users to store and access texts in a
+								key-value model.
+							</p>
+							<div class="work-bottom">
+								<p>Download link: <a href="https://github.com/zzuo123/MclipPlusPlus"
+										target="_blank">here</a></p>
+								<div class="work-skills">
+									<div class="randombg">Python</div>
+									<div class="randombg">Pickle</div>
+									<div class="randombg">Pyperclip</div>
+									<div class="randombg">DS&Algo</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img class="work-background" src="./images/demo/python.jpeg" alt="Python Image">
+						<a href="https://github.com/zzuo123/Text_Encryption" target="_blank"><img class="work-github"
+								src="./images/github.svg" alt="Github Image"></a>
+						<div class="work-text">
+							<h2>Text Encryption</h2>
+							<p>
+								A Python Script that encrypts your text by filling it into a x by y 2D array in row
+								order and read from it in colum order, then recrypt it by reversing the process. The
+								combination of x and y is your password to decrypt.
+							</p>
+							<div class="work-bottom">
+								<p>Download link: <a href="https://github.com/zzuo123/Text_Encryption"
+										target="_blank">here</a></p>
+								<div class="work-skills">
+									<div class="randombg">Python</div>
+									<div class="randombg">Cryptography</div>
+									<div class="randombg">Algorithm</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!-- Add Pagination and arrows -->
 				<div class="swiper-pagination"></div>

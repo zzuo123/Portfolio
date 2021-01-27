@@ -363,9 +363,27 @@ nav {
 #skills-grid .skills-item {
   border-radius: 32px;
   padding: 0 16px;
-  height: 400px;
+  min-height: 300px;
   background-color: #197DB3;
   color: #e2e2e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#skills-grid .skills-item h2 {
+  text-align: center;
+}
+
+#skills-grid .skills-item li {
+  line-height: 1.5em;
 }
 
 @media (max-width: 768px) {
@@ -406,48 +424,163 @@ nav {
 }
 
 .swiper-slide {
-  width: 100%;
   text-align: center;
   font-size: 18px;
   background: #fff;
+}
+
+#work-wrapper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#work-wrapper .swiper-slide .work-background {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow-x: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+#work-wrapper .swiper-slide .work-background:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+#work-wrapper .swiper-slide .work-github {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+#work-wrapper .swiper-slide .work-github:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+@media (max-width: 768px) {
+  #work-wrapper .swiper-slide .work-github {
+    width: 15%;
+  }
+}
+
+#work-wrapper .swiper-slide .work-text {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 2em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  color: #e2e2e2;
+}
+
+#work-wrapper .swiper-slide .work-text h2,
+#work-wrapper .swiper-slide .work-text p {
+  padding: 0 5em;
+}
+
+#work-wrapper .swiper-slide .work-text p {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  #work-wrapper .swiper-slide .work-text h2,
+  #work-wrapper .swiper-slide .work-text p {
+    padding: 0 1em;
+  }
+}
+
+#work-wrapper .swiper-slide .work-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#slide1 {
-  background: url("../../images/skiing_profile.jpg");
-  background-size: cover;
+#work-wrapper .swiper-slide .work-bottom a {
+  color: #e2e2e2;
+  text-decoration: underline;
 }
 
-#slide2 {
-  background: red;
+#work-wrapper .swiper-slide .work-bottom .work-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
 }
 
-#slide3 {
-  background: orange;
+#work-wrapper .swiper-slide .work-bottom .work-skills div {
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px;
+  margin-right: 5px;
+  margin-bottom: 3px;
 }
 
-#slide4 {
-  background: purple;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #e2e2e2;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-#slide5 {
-  background: blue;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: black;
 }
 
 .swiper-button-next {
-  color: #e2e2e2;
+  padding: 0.9em 0.7em 0.9em 1.1em;
 }
 
 .swiper-button-prev {
-  color: #e2e2e2;
+  padding: 0.9em 1.1em 0.9em 0.7em;
 }
 
 .swiper-pagination-bullet-active {
