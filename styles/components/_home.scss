@@ -4,29 +4,70 @@
 }
 
 #home-page .content {
-	margin     : 0 !important;
-	color      : white;
-	font-family: 'Montserrat Alternates', sans-serif;
-}
+	margin         : 0 !important;
+	color          : white;
+	font-family    : 'Montserrat Alternates', sans-serif;
+	flex-direction : row;
+	justify-content: space-evenly;
 
-#header {
-	font-size: $xl-text*1.2;
-	transform: translateY(-1em);
+	img {
+		width: 30%;
+	}
 
 	@include lg {
-		font-size: $xl-text;
+		flex-direction: column;
+
+		img {
+			width     : 50%;
+			margin-top: $navbar-height;
+		}
+
+		#header {
+			margin: 0.5em 0 0 0;
+		}
 	}
 
 	@include md {
-		translate : none;
-		text-align: center;
-		font-size : $md-text + 8px;
+		img {
+			width: 70%;
+		}
+
+		#header {
+			width: 90%;
+		}
+	}
+}
+
+#header {
+	font-size: $xl-text;
+	transform: translateY(-1em);
+
+	@include md {
+		translate: none;
+		font-size: $lg-text - 8px;
 	}
 
 	a {
 		text-decoration: none;
 		color          : white;
 		cursor         : default;
+	}
+
+	#home-part1::after {
+		content: 'I am Zhiyang Zuo,';
+
+		@include md {
+			content: 'I am';
+		}
+	}
+
+	#home-part2::after {
+		content: '';
+
+		@include md {
+			white-space: pre;
+			content    : 'Zhiyang Zuo,\a';
+		}
 	}
 }
 

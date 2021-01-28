@@ -243,24 +243,53 @@ nav {
   margin: 0 !important;
   color: white;
   font-family: 'Montserrat Alternates', sans-serif;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-#header {
-  font-size: 76.8px;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
+#home-page .content img {
+  width: 30%;
 }
 
 @media (max-width: 992px) {
-  #header {
-    font-size: 64px;
+  #home-page .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
+  #home-page .content img {
+    width: 50%;
+    margin-top: 8vh;
+  }
+  #home-page .content #header {
+    margin: 0.5em 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #home-page .content img {
+    width: 70%;
+  }
+  #home-page .content #header {
+    width: 90%;
+  }
+}
+
+#header {
+  font-size: 64px;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
 }
 
 @media (max-width: 768px) {
   #header {
     translate: none;
-    text-align: center;
     font-size: 40px;
   }
 }
@@ -269,6 +298,27 @@ nav {
   text-decoration: none;
   color: white;
   cursor: default;
+}
+
+#header #home-part1::after {
+  content: 'I am Zhiyang Zuo,';
+}
+
+@media (max-width: 768px) {
+  #header #home-part1::after {
+    content: 'I am';
+  }
+}
+
+#header #home-part2::after {
+  content: '';
+}
+
+@media (max-width: 768px) {
+  #header #home-part2::after {
+    white-space: pre;
+    content: 'Zhiyang Zuo,\a';
+  }
 }
 
 @-webkit-keyframes blinker {
