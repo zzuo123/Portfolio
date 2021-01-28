@@ -9,9 +9,10 @@
 	font-family    : 'Montserrat Alternates', sans-serif;
 	flex-direction : row;
 	justify-content: space-evenly;
+	align-items    : center;
 
 	img {
-		width: 30%;
+		width: 28%;
 	}
 
 	#header-wrapper {
@@ -21,7 +22,6 @@
 
 	#header {
 		font-size: $xl-text;
-		transform: translateY(-1em);
 
 		a {
 			text-decoration: none;
@@ -51,19 +51,26 @@
 		flex-direction: column;
 
 		img {
-			width     : 50%;
+			width     : 30%;
 			margin-top: $navbar-height;
 		}
 
 		#header {
-			margin: 0.5em 0 0 0;
+			margin-bottom: 1em;
+			font-size    : $lg-text;
 		}
 	}
 
 	@include md {
+		img {
+			width     : 50%;
+			margin-top: $navbar-height / 2;
+		}
+
 		#header {
-			translate: none;
-			font-size: $lg-text - 8px;
+			translate    : none;
+			font-size    : $lg-text - 8px;
+			margin-bottom: 0.5em;
 		}
 	}
 
