@@ -1,5 +1,5 @@
 .page {
-	background-color: $light-background-color;
+	background-color: $light-background;
 
 	.content {
 		// subtract navbar height and next-page height
@@ -31,13 +31,13 @@
 }
 
 .bubble-button {
-	background-color: $dark-background-color;
+	background-color: $dark-background;
 	padding         : 0.5em 1em;
 	border-radius   : 20px;
 	width           : fit-content;
 
 	@include md {
-		font-size: $sm-text - 4px;
+		font-size: $sm-text;
 	}
 
 	a {
@@ -51,4 +51,4 @@
 @import "./about";
 @import "./skills";
 @import "./works";
-@import "./contact";
+@import "./footer";
