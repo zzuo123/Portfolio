@@ -256,6 +256,48 @@ nav {
   width: 30%;
 }
 
+#home-page .content #header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#home-page .content #header {
+  font-size: 64px;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+#home-page .content #header a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+
+#home-page .content #header #home-part1::after {
+  content: 'I am Zhiyang Zuo,';
+}
+
+@media (max-width: 576px) {
+  #home-page .content #header #home-part1::after {
+    content: 'I am';
+  }
+}
+
+#home-page .content #header #home-part2::after {
+  content: '';
+}
+
+@media (max-width: 576px) {
+  #home-page .content #header #home-part2::after {
+    white-space: pre;
+    content: 'Zhiyang Zuo,\a';
+  }
+}
+
 @media (max-width: 992px) {
   #home-page .content {
     -webkit-box-orient: vertical;
@@ -273,51 +315,18 @@ nav {
 }
 
 @media (max-width: 768px) {
-  #home-page .content img {
-    width: 70%;
-  }
   #home-page .content #header {
-    width: 90%;
-  }
-}
-
-#header {
-  font-size: 64px;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-}
-
-@media (max-width: 768px) {
-  #header {
     translate: none;
     font-size: 40px;
   }
 }
 
-#header a {
-  text-decoration: none;
-  color: white;
-  cursor: default;
-}
-
-#header #home-part1::after {
-  content: 'I am Zhiyang Zuo,';
-}
-
-@media (max-width: 768px) {
-  #header #home-part1::after {
-    content: 'I am';
+@media (max-width: 576px) {
+  #home-page .content img {
+    width: 70%;
   }
-}
-
-#header #home-part2::after {
-  content: '';
-}
-
-@media (max-width: 768px) {
-  #header #home-part2::after {
-    white-space: pre;
-    content: 'Zhiyang Zuo,\a';
+  #home-page .content #header {
+    width: 90%;
   }
 }
 
