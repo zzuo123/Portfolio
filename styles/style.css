@@ -28,6 +28,12 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 576px) {
+  .page .content {
+    margin: 0 10vw;
+  }
+}
+
 .page .next-page {
   position: relative;
   height: 11vh;
@@ -327,7 +333,7 @@ nav {
     width: 70%;
   }
   #home-page .content #header {
-    width: 90%;
+    width: 100%;
   }
 }
 
