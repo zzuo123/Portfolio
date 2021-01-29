@@ -1,0 +1,23 @@
+#coding-image {
+	#coding-headphone:hover path {
+		fill-opacity: 0;
+	}
+
+	#coding-laptop:hover {
+		path {
+			fill: white;
+		}
+
+		#coding-laptop-circle {
+			fill: #535461;
+		}
+	}
+
+	#coding-tiles:hover path {
+		fill-opacity: 0;
+	}
+
+	#coding-plant:hover path {
+		fill: green;
+	}
+}

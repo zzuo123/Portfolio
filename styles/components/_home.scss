@@ -11,7 +11,7 @@
 	justify-content: space-evenly;
 	align-items    : center;
 
-	img {
+	#coding-image {
 		width: 28%;
 	}
 
@@ -50,7 +50,7 @@
 	@include lg {
 		flex-direction: column;
 
-		img {
+		#coding-image {
 			width     : 30%;
 			margin-top: $navbar-height;
 		}
@@ -62,7 +62,7 @@
 	}
 
 	@include md {
-		img {
+		#coding-image {
 			width     : 50%;
 			margin-top: $navbar-height / 2;
 		}
@@ -75,7 +75,7 @@
 	}
 
 	@include sm {
-		img {
+		#coding-image {
 			width: 70%;
 		}
 
