@@ -369,6 +369,11 @@ nav {
   font-size: 16px;
 }
 
+#about-page .content #about-text p > a {
+  font-weight: bold;
+  color: black;
+}
+
 #about-page .content #about-text .bubble-button {
   -webkit-box-shadow: 0 7px #999;
           box-shadow: 0 7px #999;

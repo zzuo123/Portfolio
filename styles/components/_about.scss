@@ -13,6 +13,11 @@
 			width    : 50%;
 			font-size: $sm-text;
 
+			p>a {
+				font-weight: bold;
+				color      : black;
+			}
+
 			.bubble-button {
 				box-shadow: 0 7px #999;
 
