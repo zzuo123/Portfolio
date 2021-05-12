@@ -362,6 +362,7 @@ nav {
 #about-page .content #my-photo {
   width: 40%;
   border-radius: 5%;
+  overflow: hidden;
 }
 
 #about-page .content #about-text {
@@ -386,7 +387,7 @@ nav {
           transform: translateY(4px);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #about-page .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -399,9 +400,14 @@ nav {
         justify-content: space-around;
   }
   #about-page .content #my-photo {
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 250px;
     margin-top: 1em;
+    border-radius: 50%;
+    border: 5px solid gray;
+    padding: 2px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #about-page .content #about-text {
     width: 80vw;
@@ -419,8 +425,13 @@ nav {
   }
   #about-page .content #about-text .bubble-button {
     margin-top: 1em;
-    -ms-grid-column-align: center;
-        justify-self: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #about-page .content #my-photo {
+    width: 200px;
+    height: 200px;
   }
 }
 
